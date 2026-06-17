@@ -155,3 +155,23 @@ body {
   from { height: var(--radix-accordion-content-height); }
   to { height: 0; }
 }
+@theme {
+  --color-primary: #16A34A;
+  --color-primary-hover: #15803D;
+  --color-primary-light: #DCFCE7;
+
+  --color-background: #ffffff;
+  --color-background-soft: #f7f7f7;
+
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
+
+  --color-border: #e2e8f0;
+
+  --color-accent: #f59e0b;
+  --color-accent-light: #fde68a;
+
+  --color-success: #16a34a;
+  --color-error: #dc2626;
+  --color-info: #2563eb;
+}

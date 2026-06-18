@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -25,28 +26,10 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[92vh] flex items-center overflow-hidden bg-navy-600 dark:bg-navy-900"
+      className="relative min-h-[92vh] flex items-center overflow-hidden bg-white"
       aria-label="Hero section"
     >
-      {/* Animated background grid */}
-      <div
-        className="absolute inset-0 bg-hero-grid bg-grid opacity-40"
-        aria-hidden="true"
-      />
-
-      {/* Radial gradient overlay */}
-      <div
-        className="absolute inset-0 bg-gradient-radial from-cyan-500/8 via-transparent to-transparent"
-        aria-hidden="true"
-      />
-
-      {/* Floating orbs */}
-      <motion.div
-        animate={{ y: [0, -20, 0], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 right-1/4 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl"
-        aria-hidden="true"
-      />
+      
       <motion.div
         animate={{ y: [0, 20, 0], opacity: [0.2, 0.35, 0.2] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -73,10 +56,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight text-balance"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900"
           >
             Your home,{" "}
-            <span className="gradient-text">always protected</span>
+            <span className="text-primary">always protected</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -84,7 +67,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-lg sm:text-xl text-white/60 leading-relaxed max-w-xl"
+            className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl"
           >
             Enterprise-grade security systems designed for modern homes.
             Smart cameras, intelligent alarms, and seamless home automation — all in one ecosystem.
@@ -98,8 +81,8 @@ export default function HeroSection() {
             className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-5"
           >
             {TRUST_POINTS.map((point) => (
-              <li key={point} className="flex items-center gap-2 text-sm text-white/70">
-                <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+              <li key={point} className="flex items-center gap-2 text-sm text-slate-700"> 
+                <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
                 {point}
               </li>
             ))}
@@ -112,7 +95,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-10 flex flex-col sm:flex-row gap-3"
           >
-            <Button variant="glow" size="xl" asChild>
+            <Button className="bg-primary hover:bg-primary-hover text-white">
               <Link href="/category/kits">
                 Shop security kits
                 <ArrowRight className="h-5 w-5" />
@@ -121,7 +104,7 @@ export default function HeroSection() {
             <Button
               variant="outline"
               size="xl"
-              className="border-white/20 text-white hover:bg-white/10 hover:text-white hover:border-white/40"
+              className="border-slate-300 text-slate-800 hover:bg-white/10 hover:text-white hover:border-white/40"
               asChild
             >
               <Link href="#how-it-works">
@@ -140,7 +123,12 @@ export default function HeroSection() {
           >
             {/* Avatar stack */}
             <div className="flex -space-x-2">
-              {["bg-cyan-500", "bg-blue-500", "bg-purple-500", "bg-green-500"].map(
+              {[
+"bg-slate-700",
+"bg-slate-600",
+"bg-slate-500",
+"bg-primary"
+].map(
                 (color, i) => (
                   <div
                     key={i}
@@ -156,69 +144,25 @@ export default function HeroSection() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                 ))}
-                <span className="text-sm font-semibold text-white ml-1">4.9</span>
+                <span className="text-sm font-semibold text-slate-900 ml-1">4.9</span>
               </div>
-              <p className="text-xs text-white/50">from 12,400+ verified reviews</p>
+              <p className="text-xs text-slate-500">from 12,400+ verified reviews</p>
             </div>
           </motion.div>
         </div>
+           </motion.div>
+      {/* Hero Image */}
+<div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-[45%]">
+  <Image
+  src="/hero-home.png"
+  alt="Smart Home Security"
+  width={900}
+  height={700}
+  priority
+  className="rounded-3xl shadow-2xl"
+/>
+</div>
 
-        {/* Hero visual — abstract security shield */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block"
-          aria-hidden="true"
-        >
-          <div className="relative w-[480px] h-[480px]">
-            {/* Outer ring */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 rounded-full border border-cyan-500/15"
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-8 rounded-full border border-cyan-500/10"
-            />
-            {/* Center shield */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-cyan-500/20 blur-2xl scale-150" />
-                <div className="relative h-48 w-48 rounded-full bg-navy-700/80 border border-cyan-500/30 flex items-center justify-center glass">
-                  <Shield className="h-24 w-24 text-cyan-400" strokeWidth={1} />
-                </div>
-              </div>
-            </div>
-
-            {/* Floating stat cards */}
-            {[
-              { label: "Response time", value: "< 30s", x: "-left-8", y: "top-16" },
-              { label: "Uptime", value: "99.9%", x: "-right-4", y: "top-24" },
-              { label: "Cameras online", value: "12", x: "-left-4", y: "bottom-20" },
-            ].map((stat) => (
-              <motion.div
-                key={stat.label}
-                animate={{ y: [0, -6, 0] }}
-                transition={{
-                  duration: 3 + Math.random() * 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: Math.random() * 2,
-                }}
-                className={`absolute ${stat.x} ${stat.y} glass-dark rounded-xl px-4 py-3 min-w-[120px]`}
-              >
-                <p className="text-xs text-white/50">{stat.label}</p>
-                <p className="text-xl font-bold text-cyan-400">{stat.value}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </motion.div>
-
-      {/* Bottom wave */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
     </section>
   );

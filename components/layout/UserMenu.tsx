@@ -47,8 +47,8 @@ export default function UserMenu() {
         <button
           className="h-8 w-8 rounded-full flex items-center justify-center text-sm font-bold hidden sm:flex transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
           style={{
-            background: "color-mix(in srgb, var(--color-cyan-500) 18%, transparent)",
-            color: "var(--color-cyan-500)",
+            background: "color-mix(in srgb, var(--color-green-600) 18%, transparent)",
+            color: "var(--color-green-600)",
           }}
           aria-label="User menu"
         >

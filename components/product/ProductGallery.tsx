@@ -48,7 +48,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
             </motion.div>
           </AnimatePresence>
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-navy-600/5 to-cyan-500/5">
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#111827]/5 to-green-600/5">
             <Shield className="h-24 w-24 text-muted-foreground/20" strokeWidth={1} />
           </div>
         )}
@@ -98,7 +98,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
               className={cn(
                 "relative aspect-square rounded-xl overflow-hidden border-2 transition-all duration-150",
                 i === active
-                  ? "border-cyan-500 ring-1 ring-cyan-500/30"
+                  ? "border-green-600 ring-1 ring-green-600/30"
                   : "border-border hover:border-border-primary"
               )}
               aria-label={`View image ${i + 1}`}

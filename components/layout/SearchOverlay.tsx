@@ -205,7 +205,7 @@ export default function SearchOverlay() {
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium truncate group-hover:text-cyan-500 transition-colors">
+                          <p className="text-sm font-medium truncate group-hover:text-green-500 transition-colors">
                             {result.name}
                           </p>
                           {result.category && (
@@ -226,7 +226,7 @@ export default function SearchOverlay() {
                     ))}
                     <button onClick={handleSearch}
                       className="w-full mt-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors hover:bg-muted"
-                      style={{ color: "var(--color-cyan-500)" }}>
+                      style={{ color: "var(--color-green-600)" }}>
                       See all results for &ldquo;{query}&rdquo;
                       <ArrowRight className="h-4 w-4" />
                     </button>
@@ -261,7 +261,7 @@ export default function SearchOverlay() {
                       <div className="flex flex-wrap gap-2">
                         {TRENDING_SEARCHES.map((term) => (
                           <button key={term} onClick={() => handleSuggestionClick(term)}
-                            className="text-sm px-3 py-1.5 rounded-full border transition-colors hover:border-cyan-500/40 hover:text-cyan-500"
+                            className="text-sm px-3 py-1.5 rounded-full border transition-colors hover:border-green-500/40 hover:text-green-500"
                             style={{ borderColor: "var(--color-border)", color: "var(--color-foreground)" }}>
                             {term}
                           </button>

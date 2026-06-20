@@ -50,7 +50,7 @@ function FilterSection({
     <div className="border-b border-border last:border-0">
       <button
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center justify-between w-full py-3 text-sm font-semibold text-foreground hover:text-cyan-500 transition-colors"
+        className="flex items-center justify-between w-full py-3 text-sm font-semibold text-foreground hover:text-green-600 transition-colors"
       >
         {title}
         <ChevronDown
@@ -150,7 +150,7 @@ export default function ProductFilters({ className }: ProductFiltersProps) {
               className={cn(
                 "w-full text-left text-sm px-3 py-2 rounded-lg transition-colors",
                 filters.priceRange?.min === range.min
-                  ? "bg-cyan-500/10 text-cyan-500 font-medium"
+                  ? "bg-green-600/10 text-green-600 font-medium"
                   : "text-foreground/80 hover:bg-accent"
               )}
             >
@@ -179,7 +179,7 @@ export default function ProductFilters({ className }: ProductFiltersProps) {
                       : f.brands.filter((b) => b !== brand.id),
                   }))
                 }
-                className="h-4 w-4 rounded border-border accent-cyan-500"
+                className="h-4 w-4 rounded border-border accent-green-600"
               />
               <span className="text-sm text-foreground/80 group-hover:text-foreground transition-colors">
                 {brand.name}
@@ -204,7 +204,7 @@ export default function ProductFilters({ className }: ProductFiltersProps) {
               className={cn(
                 "w-full text-left text-sm px-3 py-2 rounded-lg transition-colors flex items-center gap-2",
                 filters.minRating === rating
-                  ? "bg-cyan-500/10 text-cyan-500 font-medium"
+                  ? "bg-green-600/10 text-green-600 font-medium"
                   : "text-foreground/80 hover:bg-accent"
               )}
             >
@@ -224,7 +224,7 @@ export default function ProductFilters({ className }: ProductFiltersProps) {
             onChange={(e) =>
               setFilters((f) => ({ ...f, inStock: e.target.checked }))
             }
-            className="h-4 w-4 rounded border-border accent-cyan-500"
+            className="h-4 w-4 rounded border-border accent-green-600"
           />
           <span className="text-sm text-foreground/80">In stock only</span>
         </label>

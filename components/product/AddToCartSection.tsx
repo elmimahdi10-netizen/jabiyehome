@@ -59,8 +59,8 @@ export default function AddToCartSection({ product }: AddToCartSectionProps) {
                   "px-4 py-2 rounded-lg text-sm border-2 transition-all duration-150 font-medium",
                   "disabled:opacity-40 disabled:cursor-not-allowed",
                   selectedVariant?.id === variant.id
-                    ? "border-cyan-500 text-cyan-500 bg-cyan-500/10"
-                    : "border-border hover:border-cyan-500/50"
+                    ? "border-green-600 text-green-600 bg-green-600/10"
+                    : "border-border hover:border-green-600/50"
                 )}
               >
                 {variant.value}

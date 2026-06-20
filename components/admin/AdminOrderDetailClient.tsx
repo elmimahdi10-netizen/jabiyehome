@@ -171,7 +171,7 @@ export default function AdminOrderDetailClient({ order }: { order: any }) {
             <h2 className="font-semibold">Customer</h2>
             <div>
               <p className="font-medium">{order.user?.name}</p>
-              <a href={`mailto:${order.user?.email}`} className="text-sm hover:underline" style={{ color: "var(--color-cyan-500)" }}>
+              <a href={`mailto:${order.user?.email}`} className="text-sm hover:underline" style={{ color: "var(--color-green-600)" }}>
                 {order.user?.email}
               </a>
               <p className="text-xs mt-1" style={{ color: "var(--color-muted-foreground)" }}>
@@ -179,7 +179,7 @@ export default function AdminOrderDetailClient({ order }: { order: any }) {
               </p>
             </div>
             <Link href={`/admin/customers/${order.user?.id}`}
-              className="text-xs flex items-center gap-1 hover:underline" style={{ color: "var(--color-cyan-500)" }}>
+              className="text-xs flex items-center gap-1 hover:underline" style={{ color: "var(--color-green-600)" }}>
               View customer <ExternalLink className="h-3 w-3" />
             </Link>
           </div>

@@ -33,8 +33,8 @@ const ALARM_STEPS = [
     step: "03",
     title: "Siren + notification",
     description: "105 dB siren activates. Instant push notification and SMS to your phone.",
-    color: "text-cyan-400",
-    bgColor: "bg-cyan-500/10",
+    color: "text-green-500",
+    bgColor: "bg-green-500/10",
   },
   {
     step: "04",
@@ -59,7 +59,7 @@ export default function AlarmsShowcase() {
   return (
     <section
       ref={ref}
-      className="py-24 bg-[#0a1628] dark:bg-[#030810] overflow-hidden"
+      className="py-24 bg-[#111827] dark:bg-[#030810] overflow-hidden"
       aria-labelledby="alarms-heading"
     >
       <div className="container">
@@ -181,7 +181,7 @@ export default function AlarmsShowcase() {
                   transition={{ delay: 0.3 + i * 0.08 }}
                   className="flex items-center gap-3 text-sm text-white/70"
                 >
-                  <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-green-500 shrink-0" />
                   {feature}
                 </motion.li>
               ))}

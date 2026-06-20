@@ -42,10 +42,10 @@ export default function CartDrawer() {
             {/* Header */}
             <div className="flex items-center justify-between p-5 border-b">
               <div className="flex items-center gap-2">
-                <ShoppingCart className="h-5 w-5 text-cyan-500" />
+                <ShoppingCart className="h-5 w-5 text-green-600" />
                 <h2 className="font-semibold text-lg">Your Cart</h2>
                 {itemCount > 0 && (
-                  <span className="bg-cyan-500 text-navy-900 text-xs font-bold px-2 py-0.5 rounded-full">
+                  <span className="bg-green-600 text-[#111827] text-xs font-bold px-2 py-0.5 rounded-full">
                     {itemCount}
                   </span>
                 )}
@@ -113,7 +113,7 @@ export default function CartDrawer() {
                             <Link
                               href={`/products/${item.product.slug}`}
                               onClick={closeCart}
-                              className="text-sm font-medium hover:text-cyan-500 transition-colors line-clamp-2 leading-snug"
+                              className="text-sm font-medium hover:text-green-600 transition-colors line-clamp-2 leading-snug"
                             >
                               {item.product.name}
                             </Link>
@@ -122,7 +122,7 @@ export default function CartDrawer() {
                                 {item.variant.name}: {item.variant.value}
                               </p>
                             )}
-                            <p className="text-sm font-semibold text-cyan-500 mt-1">
+                            <p className="text-sm font-semibold text-green-600 mt-1">
                               {formatPrice(price)}
                             </p>
 

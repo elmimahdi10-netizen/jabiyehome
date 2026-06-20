@@ -14,7 +14,7 @@ interface Props { products: (Product & { specs?: Record<string, string> | null }
 function Cell({ children, highlight }: { children: React.ReactNode; highlight?: boolean }) {
   return (
     <td className="px-5 py-4 text-sm align-top"
-      style={{ background: highlight ? "color-mix(in srgb, var(--color-cyan-500) 4%, transparent)" : undefined }}>
+      style={{ background: highlight ? "color-mix(in srgb, var(--color-green-600) 4%, transparent)" : undefined }}>
       {children}
     </td>
   );
@@ -44,7 +44,7 @@ export default function ComparePageClient({ products }: Props) {
         : <span className="flex items-center gap-1 text-red-500"><X className="h-4 w-4" /> Out of stock</span>
     )},
     { label: "Featured", key: "isFeatured", format: (p: Product) => (
-      p.isFeatured ? <Check className="h-4 w-4 text-cyan-500" /> : <Minus className="h-4 w-4" style={{ color: "var(--color-muted-foreground)" }} />
+      p.isFeatured ? <Check className="h-4 w-4 text-green-600" /> : <Minus className="h-4 w-4" style={{ color: "var(--color-muted-foreground)" }} />
     )},
   ];
 
@@ -53,7 +53,7 @@ export default function ComparePageClient({ products }: Props) {
       <div className="mb-8">
         <h1 className="text-3xl font-bold">Comparing {products.length} products</h1>
         <p className="text-sm mt-1" style={{ color: "var(--color-muted-foreground)" }}>
-          <Link href="/products" className="hover:underline" style={{ color: "var(--color-cyan-500)" }}>
+          <Link href="/products" className="hover:underline" style={{ color: "var(--color-green-600)" }}>
             ← Back to products
           </Link>
         </p>
@@ -117,7 +117,7 @@ export default function ComparePageClient({ products }: Props) {
             {allSpecKeys.length > 0 && (
               <tr>
                 <td colSpan={products.length + 1} className="px-5 py-3 text-xs font-bold uppercase tracking-wider"
-                  style={{ background: "color-mix(in srgb, var(--color-cyan-500) 8%, transparent)", color: "var(--color-cyan-500)" }}>
+                  style={{ background: "color-mix(in srgb, var(--color-green-600) 8%, transparent)", color: "var(--color-green-600)" }}>
                   Specifications
                 </td>
               </tr>

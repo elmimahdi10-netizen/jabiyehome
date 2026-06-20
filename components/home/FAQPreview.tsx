@@ -45,7 +45,7 @@ export default function FAQPreview() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-sm font-semibold text-cyan-500 uppercase tracking-wider mb-3">
+            <p className="text-sm font-semibold text-green-500 uppercase tracking-wider mb-3">
               FAQ
             </p>
             <h2

@@ -36,7 +36,7 @@ export default function CheckoutSuccessClient() {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center space-y-4">
-          <Loader2 className="h-10 w-10 animate-spin mx-auto" style={{ color: "var(--color-cyan-500)" }} />
+          <Loader2 className="h-10 w-10 animate-spin mx-auto" style={{ color: "var(--color-green-600)" }} />
           <p style={{ color: "var(--color-muted-foreground)" }}>Confirming your order…</p>
         </div>
       </div>
@@ -70,10 +70,10 @@ export default function CheckoutSuccessClient() {
           {/* Success icon */}
           <div className="relative mx-auto w-24 h-24">
             <div className="absolute inset-0 rounded-full animate-ping opacity-25"
-              style={{ background: "var(--color-cyan-500)" }} />
+              style={{ background: "var(--color-green-600)" }} />
             <div className="relative h-24 w-24 rounded-full flex items-center justify-center"
-              style={{ background: "color-mix(in srgb, var(--color-cyan-500) 12%, transparent)", border: "2px solid color-mix(in srgb, var(--color-cyan-500) 30%, transparent)" }}>
-              <CheckCircle2 className="h-12 w-12" style={{ color: "var(--color-cyan-500)" }} />
+              style={{ background: "color-mix(in srgb, var(--color-green-600) 12%, transparent)", border: "2px solid color-mix(in srgb, var(--color-green-600) 30%, transparent)" }}>
+              <CheckCircle2 className="h-12 w-12" style={{ color: "var(--color-green-600)" }} />
             </div>
           </div>
 
@@ -106,7 +106,7 @@ export default function CheckoutSuccessClient() {
             ].map(({ step, text }) => (
               <div key={step} className="flex items-start gap-3">
                 <div className="h-6 w-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
-                  style={{ background: "color-mix(in srgb, var(--color-cyan-500) 12%, transparent)", color: "var(--color-cyan-500)" }}>
+                  style={{ background: "color-mix(in srgb, var(--color-green-600) 12%, transparent)", color: "var(--color-green-600)" }}>
                   {step}
                 </div>
                 <p className="text-sm" style={{ color: "var(--color-muted-foreground)" }}>{text}</p>

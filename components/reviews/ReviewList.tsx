@@ -88,7 +88,7 @@ export default function ReviewList({
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className="h-9 w-9 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
-                    style={{ background: "color-mix(in srgb, var(--color-cyan-500) 15%, transparent)", color: "var(--color-cyan-500)" }}>
+                    style={{ background: "color-mix(in srgb, var(--color-green-600) 15%, transparent)", color: "var(--color-green-600)" }}>
                     {review.user.name.charAt(0).toUpperCase()}
                   </div>
                   <div>
@@ -123,10 +123,10 @@ export default function ReviewList({
                 className={cn(
                   "flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border transition-colors",
                   voted.has(review.id)
-                    ? "border-cyan-500/40 text-cyan-500"
-                    : "border-border hover:border-cyan-500/40 hover:text-cyan-500"
+                    ? "border-green-600/40 text-green-600"
+                    : "border-border hover:border-green-600/40 hover:text-green-600"
                 )}
-                style={{ color: voted.has(review.id) ? "var(--color-cyan-500)" : "var(--color-muted-foreground)" }}
+                style={{ color: voted.has(review.id) ? "var(--color-green-600)" : "var(--color-muted-foreground)" }}
               >
                 <ThumbsUp className="h-3.5 w-3.5" />
                 Helpful{review.helpfulCount > 0 ? ` (${review.helpfulCount})` : ""}

@@ -33,7 +33,7 @@ export default function HeroSection() {
       <motion.div
         animate={{ y: [0, 20, 0], opacity: [0.2, 0.35, 0.2] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-1/4 left-1/4 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl"
+        className="absolute bottom-1/4 left-1/4 h-96 w-96 rounded-full bg-green-600/10 blur-3xl"
         aria-hidden="true"
       />
 
@@ -45,7 +45,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Badge variant="cyan" className="mb-6 px-4 py-1.5 text-sm font-medium border-cyan-500/30 bg-cyan-500/10">
+            <Badge variant="outline" className="mb-6 px-4 py-1.5 text-sm font-medium border-green-500/30 bg-green-500/10">
               <Shield className="h-3.5 w-3.5 mr-1.5" />
               Trusted by 150,000+ homeowners
             </Badge>
@@ -132,7 +132,7 @@ export default function HeroSection() {
                 (color, i) => (
                   <div
                     key={i}
-                    className={`h-9 w-9 rounded-full ${color} border-2 border-navy-600 flex items-center justify-center text-xs font-bold text-white`}
+                    className={`h-9 w-9 rounded-full ${color} border-2 border-[#111827] flex items-center justify-center text-xs font-bold text-white`}
                   >
                     {String.fromCharCode(65 + i)}
                   </div>

@@ -136,7 +136,7 @@ export default function LoginForm() {
             <Link
               href="/forgot-password"
               className="text-xs hover:underline"
-              style={{ color: "var(--color-cyan-500)" }}
+              style={{ color: "var(--color-green-600)" }}
             >
               Forgot password?
             </Link>
@@ -178,7 +178,7 @@ export default function LoginForm() {
 
       <p className="text-center text-sm" style={{ color: "var(--color-muted-foreground)" }}>
         Don&apos;t have an account?{" "}
-        <Link href="/register" className="font-medium hover:underline" style={{ color: "var(--color-cyan-500)" }}>
+        <Link href="/register" className="font-medium hover:underline" style={{ color: "var(--color-green-600)" }}>
           Create one for free
         </Link>
       </p>

@@ -52,7 +52,7 @@ export default function Pagination({ currentPage, totalPages }: PaginationProps)
             className={cn(
               "h-9 w-9 rounded-lg text-sm font-medium transition-colors",
               currentPage === page
-                ? "bg-cyan-500 text-navy-900 font-bold"
+                ? "bg-green-600 text-[#111827] font-bold"
                 : "text-foreground/80 hover:bg-accent"
             )}
             aria-current={currentPage === page ? "page" : undefined}

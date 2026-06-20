@@ -124,8 +124,8 @@ export default function ImageUploader({
           className={cn(
             "relative flex flex-col items-center justify-center rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200 py-10 px-4",
             isDragging
-              ? "border-cyan-500 bg-cyan-500/5"
-              : "border-border hover:border-cyan-500/50 hover:bg-muted/30"
+              ? "border-green-600 bg-green-600/5"
+              : "border-border hover:border-green-600/50 hover:bg-muted/30"
           )}
         >
           <input
@@ -137,7 +137,7 @@ export default function ImageUploader({
             onChange={(e) => e.target.files && handleFiles(e.target.files)}
           />
           {uploading ? (
-            <Loader2 className="h-8 w-8 animate-spin text-cyan-500" />
+            <Loader2 className="h-8 w-8 animate-spin text-green-600" />
           ) : (
             <>
               <Upload className="h-8 w-8 mb-3" style={{ color: "var(--color-muted-foreground)" }} />
@@ -167,7 +167,7 @@ export default function ImageUploader({
               key={img.publicId}
               className={cn(
                 "relative aspect-square rounded-xl overflow-hidden border-2 transition-all",
-                img.isPrimary ? "border-cyan-500" : "border-border"
+                img.isPrimary ? "border-green-600" : "border-border"
               )}
             >
               <Image src={img.url} alt={img.altText ?? `Product image ${i + 1}`} fill className="object-cover" sizes="150px" />
@@ -175,7 +175,7 @@ export default function ImageUploader({
               {/* Primary badge */}
               {img.isPrimary && (
                 <div className="absolute top-1.5 left-1.5">
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-cyan-500 text-[#0a1628]">
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-green-600 text-[#111827]">
                     Primary
                   </span>
                 </div>

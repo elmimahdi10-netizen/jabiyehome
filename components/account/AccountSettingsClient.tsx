@@ -78,7 +78,7 @@ export default function AccountSettingsClient({ user }: Props) {
       <div className={sectionClass} style={sectionStyle}>
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-full flex items-center justify-center"
-            style={{ background: "color-mix(in srgb, var(--color-cyan-500) 15%, transparent)", color: "var(--color-cyan-500)" }}>
+            style={{ background: "color-mix(in srgb, var(--color-green-600) 15%, transparent)", color: "var(--color-green-600)" }}>
             <User className="h-5 w-5" />
           </div>
           <div>
@@ -119,7 +119,7 @@ export default function AccountSettingsClient({ user }: Props) {
       <div className={sectionClass} style={sectionStyle}>
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-full flex items-center justify-center"
-            style={{ background: "color-mix(in srgb, var(--color-navy-600) 15%, transparent)", color: "var(--color-navy-600)" }}>
+            style={{ background: "color-mix(in srgb, var(--color-[#111827]) 15%, transparent)", color: "var(--color-[#111827])" }}>
             <Lock className="h-5 w-5" />
           </div>
           <div>

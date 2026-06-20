@@ -42,10 +42,10 @@ export default function CamerasShowcase() {
             className="relative order-2 lg:order-1"
           >
             <div className="relative mx-auto max-w-sm">
-              <div className="absolute inset-0 bg-cyan-500/15 blur-3xl rounded-full" />
+              <div className="absolute inset-0 bg-green-500/15 blur-3xl rounded-full" />
 
               {/* Camera feed card */}
-              <div className="relative bg-[#0a1628] rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+              <div className="relative bg-[#111827] rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
                 {/* Camera feed placeholder */}
                 <div className="relative aspect-video bg-[#050c18] flex items-center justify-center">
                   {/* Simulated camera feed grid overlay */}
@@ -69,9 +69,9 @@ export default function CamerasShowcase() {
                   <motion.div
                     animate={{ opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute top-8 left-12 w-16 h-20 border-2 border-cyan-400 rounded"
+                    className="absolute top-8 left-12 w-16 h-20 border-2 border-green-500 rounded"
                   >
-                    <span className="absolute -top-4 left-0 text-[9px] font-bold text-cyan-400 bg-[#0a1628] px-1">
+                    <span className="absolute -top-4 left-0 text-[9px] font-bold text-green-500 bg-[#111827] px-1">
                       PERSON
                     </span>
                   </motion.div>
@@ -124,10 +124,10 @@ export default function CamerasShowcase() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="order-1 lg:order-2"
           >
-            <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-1.5 mb-6">
-              <Camera className="h-4 w-4 text-cyan-400" />
-              <span className="text-sm font-medium text-cyan-400">Security Cameras</span>
-              <Badge variant="cyan" className="text-[10px] px-1.5 py-0">4K AI</Badge>
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-1.5 mb-6">
+              <Camera className="h-4 w-4 text-green-500" />
+              <span className="text-sm font-medium text-green-500">Security Cameras</span>
+              <Badge variant="outline" className="text-[10px] px-1.5 py-0">4K AI</Badge>
             </div>
 
             <h2
@@ -136,7 +136,7 @@ export default function CamerasShowcase() {
             >
               See everything.
               <br />
-              <span className="text-cyan-500">Miss nothing.</span>
+              <span className="text-green-500">Miss nothing.</span>
             </h2>
 
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -157,7 +157,7 @@ export default function CamerasShowcase() {
                   <span className="text-muted-foreground">{spec.label}</span>
                   <span
                     className={`font-medium ${
-                      spec.highlight ? "text-cyan-500" : "text-foreground"
+                      spec.highlight ? "text-green-500" : "text-foreground"
                     }`}
                   >
                     {spec.value}
@@ -178,7 +178,7 @@ export default function CamerasShowcase() {
                   key={label}
                   className="flex items-center gap-2 text-sm text-foreground/70 bg-muted/50 px-3 py-1.5 rounded-full border border-border/60"
                 >
-                  <Icon className="h-3.5 w-3.5 text-cyan-500" />
+                  <Icon className="h-3.5 w-3.5 text-green-500" />
                   {label}
                 </div>
               ))}

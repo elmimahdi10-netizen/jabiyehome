@@ -20,7 +20,7 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="relative rounded-3xl bg-[#0a1628] overflow-hidden px-8 py-16 sm:px-16 text-center"
+          className="relative rounded-3xl bg-[#111827] overflow-hidden px-8 py-16 sm:px-16 text-center"
         >
           {/* Background grid */}
           <div
@@ -32,11 +32,11 @@ export default function CTASection() {
             }}
           />
           {/* Glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 bg-cyan-500/20 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 bg-green-500/20 rounded-full blur-3xl" />
 
           <div className="relative">
-            <div className="h-16 w-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mx-auto mb-6">
-              <Shield className="h-8 w-8 text-cyan-400" strokeWidth={1.5} />
+            <div className="h-16 w-16 rounded-2xl bg-green-500/10 border border-green-500/30 flex items-center justify-center mx-auto mb-6">
+              <Shield className="h-8 w-8 text-green-500" strokeWidth={1.5} />
             </div>
 
             <h2

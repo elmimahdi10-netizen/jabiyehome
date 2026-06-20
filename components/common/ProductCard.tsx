@@ -97,8 +97,8 @@ export default function ProductCard({ product, className }: ProductCardProps) {
               "absolute top-2.5 right-2.5 h-8 w-8 rounded-xl flex items-center justify-center transition-all",
               "border opacity-0 group-hover:opacity-100",
               comparing
-                ? "opacity-100 border-cyan-500 bg-cyan-500/10 text-cyan-500"
-                : "border-white/20 bg-black/30 text-white hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-500"
+                ? "opacity-100 border-green-600 bg-green-600/10 text-green-600"
+                : "border-white/20 bg-black/30 text-white hover:border-green-600 hover:bg-green-600/10 hover:text-green-600"
             )}
             aria-label={comparing ? "Remove from comparison" : "Add to comparison"}
             title={comparing ? "Remove from comparison" : "Compare"}
@@ -109,7 +109,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
           {/* Compare limit warning */}
           {compareWarning && (
             <div className="absolute inset-x-2 bottom-2 text-xs text-center font-medium py-1.5 px-2 rounded-lg"
-              style={{ background: "var(--color-navy-600)", color: "white" }}>
+              style={{ background: "var(--color-[#111827])", color: "white" }}>
               Max 4 products can be compared
             </div>
           )}
@@ -121,14 +121,14 @@ export default function ProductCard({ product, className }: ProductCardProps) {
         {/* Category */}
         {product.category && (
           <p className="text-xs font-medium uppercase tracking-wider"
-            style={{ color: "var(--color-cyan-500)" }}>
+            style={{ color: "var(--color-green-600)" }}>
             {product.category.name}
           </p>
         )}
 
         {/* Name */}
         <Link href={`/products/${product.slug}`}
-          className="block font-semibold text-sm leading-snug line-clamp-2 hover:text-cyan-500 transition-colors">
+          className="block font-semibold text-sm leading-snug line-clamp-2 hover:text-green-600 transition-colors">
           {product.name}
         </Link>
 
@@ -164,7 +164,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
               "h-8 w-8 rounded-xl flex items-center justify-center border transition-all duration-200",
               isAddingToCart
                 ? "border-green-500 bg-green-500/10 text-green-500"
-                : "border-border hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-500 disabled:opacity-40 disabled:cursor-not-allowed"
+                : "border-border hover:border-green-600 hover:bg-green-600/10 hover:text-green-600 disabled:opacity-40 disabled:cursor-not-allowed"
             )}
             style={{ color: isAddingToCart ? undefined : "var(--color-muted-foreground)" }}
             aria-label={`Add ${product.name} to cart`}

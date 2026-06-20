@@ -43,7 +43,7 @@ export default function ReviewForm({ productId, productName, isSignedIn }: Props
       <div className="rounded-xl border p-6 text-center"
         style={{ borderColor: "var(--color-border)", background: "var(--color-card)" }}>
         <p className="text-sm" style={{ color: "var(--color-muted-foreground)" }}>
-          <a href="/login" className="font-medium hover:underline" style={{ color: "var(--color-cyan-500)" }}>
+          <a href="/login" className="font-medium hover:underline" style={{ color: "var(--color-green-600)" }}>
             Sign in
           </a>{" "}
           to leave a review for {productName}.

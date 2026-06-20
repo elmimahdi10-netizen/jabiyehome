@@ -182,14 +182,14 @@ export default function RegisterForm() {
           <input
             id="acceptTerms"
             type="checkbox"
-            className="h-4 w-4 mt-0.5 rounded accent-cyan-500"
+            className="h-4 w-4 mt-0.5 rounded accent-green-600"
             {...register("acceptTerms")}
           />
           <label htmlFor="acceptTerms" className="text-sm" style={{ color: "var(--color-muted-foreground)" }}>
             I agree to Jabiyehome&apos;s{" "}
-            <Link href="/terms" className="hover:underline" style={{ color: "var(--color-cyan-500)" }}>Terms of Service</Link>
+            <Link href="/terms" className="hover:underline" style={{ color: "var(--color-green-600)" }}>Terms of Service</Link>
             {" "}and{" "}
-            <Link href="/privacy" className="hover:underline" style={{ color: "var(--color-cyan-500)" }}>Privacy Policy</Link>
+            <Link href="/privacy" className="hover:underline" style={{ color: "var(--color-green-600)" }}>Privacy Policy</Link>
           </label>
         </div>
         {errors.acceptTerms && <p className="text-xs text-red-500">{errors.acceptTerms.message}</p>}
@@ -205,7 +205,7 @@ export default function RegisterForm() {
 
       <p className="text-center text-sm" style={{ color: "var(--color-muted-foreground)" }}>
         Already have an account?{" "}
-        <Link href="/login" className="font-medium hover:underline" style={{ color: "var(--color-cyan-500)" }}>
+        <Link href="/login" className="font-medium hover:underline" style={{ color: "var(--color-green-600)" }}>
           Sign in
         </Link>
       </p>

@@ -47,8 +47,8 @@ export default function ForgotPasswordForm() {
     <div className="space-y-6">
       <div className="text-center">
         <div className="h-14 w-14 rounded-2xl flex items-center justify-center mx-auto mb-4"
-          style={{ background: "color-mix(in srgb, var(--color-cyan-500) 10%, transparent)", border: "1px solid color-mix(in srgb, var(--color-cyan-500) 20%, transparent)" }}>
-          <Mail className="h-7 w-7" style={{ color: "var(--color-cyan-500)" }} />
+          style={{ background: "color-mix(in srgb, var(--color-green-600) 10%, transparent)", border: "1px solid color-mix(in srgb, var(--color-green-600) 20%, transparent)" }}>
+          <Mail className="h-7 w-7" style={{ color: "var(--color-green-600)" }} />
         </div>
         <h1 className="text-2xl font-bold">Forgot your password?</h1>
         <p className="text-sm mt-2 max-w-xs mx-auto" style={{ color: "var(--color-muted-foreground)" }}>
@@ -71,7 +71,7 @@ export default function ForgotPasswordForm() {
       </form>
 
       <p className="text-center text-sm" style={{ color: "var(--color-muted-foreground)" }}>
-        <Link href="/login" className="font-medium hover:underline flex items-center justify-center gap-1" style={{ color: "var(--color-cyan-500)" }}>
+        <Link href="/login" className="font-medium hover:underline flex items-center justify-center gap-1" style={{ color: "var(--color-green-600)" }}>
           <ArrowLeft className="h-3 w-3" /> Back to sign in
         </Link>
       </p>

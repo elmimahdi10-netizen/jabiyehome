@@ -24,7 +24,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
           className="flex items-end justify-between mb-12"
         >
           <div>
-            <p className="text-sm font-semibold text-cyan-500 uppercase tracking-wider mb-2">
+            <p className="text-sm font-semibold text-green-500 uppercase tracking-wider mb-2">
               Best sellers
             </p>
             <h2

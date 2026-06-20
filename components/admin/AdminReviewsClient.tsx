@@ -43,7 +43,7 @@ export default function AdminReviewsClient({ reviews, meta, filter }: Props) {
           <Link key={value} href={`/admin/reviews?filter=${value}`}
             className={cn(
               "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
-              filter === value ? "bg-cyan-500 text-[#0a1628]" : "bg-muted hover:bg-accent"
+              filter === value ? "bg-green-600 text-[#111827]" : "bg-muted hover:bg-accent"
             )}>
             {label}
           </Link>
@@ -86,7 +86,7 @@ export default function AdminReviewsClient({ reviews, meta, filter }: Props) {
                     {" · "}{review.user?.email}
                     {" · "}
                     <Link href={`/products/${review.product?.slug}`}
-                      className="hover:underline" style={{ color: "var(--color-cyan-500)" }}>
+                      className="hover:underline" style={{ color: "var(--color-green-600)" }}>
                       {review.product?.name}
                     </Link>
                     {" · "}{new Date(review.createdAt).toLocaleDateString()}

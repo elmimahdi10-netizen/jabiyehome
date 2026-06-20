@@ -80,10 +80,10 @@ export default function WishlistButton({
 
       {tooltip && (
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-white whitespace-nowrap z-10"
-          style={{ background: "var(--color-navy-600)" }}>
+          style={{ background: "var(--color-[#111827])" }}>
           {tooltip}
           <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent"
-            style={{ borderTopColor: "var(--color-navy-600)" }} />
+            style={{ borderTopColor: "var(--color-[#111827])" }} />
         </div>
       )}
     </div>

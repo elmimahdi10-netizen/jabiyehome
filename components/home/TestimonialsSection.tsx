@@ -14,7 +14,7 @@ const TESTIMONIALS = [
     text: "The installation was seamless and the app is incredibly intuitive. I can check on my home from anywhere in the world. The AI detection means I only get alerts when something actually matters — no more false alarms.",
     product: "Premium Security Kit",
     initials: "SM",
-    color: "bg-cyan-500",
+    color: "bg-green-500",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const TESTIMONIALS = [
     text: "Managing 12 rental properties is so much easier with Jabiyehome. The dashboard gives me live views of every property in one place. Customer support resolved my query in under 10 minutes.",
     product: "Business Security Kit",
     initials: "JR",
-    color: "bg-blue-500",
+    color: "bg-green-500",
   },
   {
     id: 3,
@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
   return (
     <section
       ref={ref}
-      className="py-24 bg-navy-600 dark:bg-navy-700 overflow-hidden"
+      className="py-24 bg-[#111827]  overflow-hidden"
       aria-labelledby="testimonials-heading"
     >
       <div className="container">
@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">
+          <p className="text-sm font-semibold text-green-500 uppercase tracking-wider mb-3">
             Customer stories
           </p>
           <h2
@@ -92,7 +92,7 @@ export default function TestimonialsSection() {
             >
               {/* Quote icon */}
               <Quote
-                className="absolute -top-2 -left-2 h-10 w-10 text-cyan-500/30"
+                className="absolute -top-2 -left-2 h-10 w-10 text-green-500/30"
                 strokeWidth={1}
               />
 
@@ -122,7 +122,7 @@ export default function TestimonialsSection() {
                   </div>
                   <div className="ml-auto text-right hidden sm:block">
                     <p className="text-xs text-white/40 mb-0.5">Purchased</p>
-                    <p className="text-sm text-cyan-400 font-medium">
+                    <p className="text-sm text-green-500 font-medium">
                       {TESTIMONIALS[current].product}
                     </p>
                   </div>
@@ -150,7 +150,7 @@ export default function TestimonialsSection() {
                   key={i}
                   onClick={() => setCurrent(i)}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === current ? "w-6 bg-cyan-400" : "w-1.5 bg-white/30"
+                    i === current ? "w-6 bg-green-500" : "w-1.5 bg-white/30"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />

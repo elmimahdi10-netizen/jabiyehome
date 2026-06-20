@@ -69,7 +69,7 @@ export default function AdminDashboardClient({ metrics, recentOrders, lowStockPr
             style={{ borderColor: "var(--color-border)", background: "var(--color-card)" }}>
             <h2 className="font-semibold">Recent orders</h2>
             <Link href="/admin/orders" className="text-xs font-medium flex items-center gap-1 hover:underline"
-              style={{ color: "var(--color-cyan-500)" }}>
+              style={{ color: "var(--color-green-600)" }}>
               View all <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
@@ -109,7 +109,7 @@ export default function AdminDashboardClient({ metrics, recentOrders, lowStockPr
             style={{ borderColor: "var(--color-border)", background: "var(--color-card)" }}>
             <h2 className="font-semibold">Low stock</h2>
             <Link href="/admin/products" className="text-xs font-medium flex items-center gap-1 hover:underline"
-              style={{ color: "var(--color-cyan-500)" }}>
+              style={{ color: "var(--color-green-600)" }}>
               Manage <ArrowRight className="h-3 w-3" />
             </Link>
           </div>

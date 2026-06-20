@@ -35,13 +35,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         <div className="h-16 flex items-center gap-2 px-5 border-b shrink-0"
           style={{ borderColor: "var(--color-border)" }}>
           <div className="h-8 w-8 rounded-lg flex items-center justify-center"
-            style={{ background: "var(--color-navy-600)" }}>
+            style={{ background: "#111827" }}>
             <Shield className="h-5 w-5" style={{ color: "var(--color-cyan-500)" }} />
           </div>
           <div>
             <p className="text-sm font-bold leading-none">Jabiyehome</p>
             <p className="text-[10px] uppercase tracking-widest leading-none mt-0.5"
-              style={{ color: "var(--color-cyan-500)" }}>Admin</p>
+              style={{ color: "#16A34A" }}>Admin</p>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
               <p className="text-xs leading-none mt-0.5" style={{ color: "var(--color-muted-foreground)" }}>{role}</p>
             </div>
             <div className="h-8 w-8 rounded-full flex items-center justify-center text-sm font-bold"
-              style={{ background: "var(--color-navy-600)", color: "var(--color-cyan-500)" }}>
+              style={{ background: "#111827", color: "#16A34A" }}>
               {session.user.name?.charAt(0) ?? "A"}
             </div>
           </div>

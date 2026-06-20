@@ -27,7 +27,7 @@ export default function CompareBar() {
         <div className="container">
           <div className="flex items-center gap-4 py-3">
             <div className="flex items-center gap-2 shrink-0">
-              <BarChart2 className="h-4 w-4" style={{ color: "var(--color-cyan-500)" }} />
+              <BarChart2 className="h-4 w-4" style={{ color: "var(--color-green-600)" }} />
               <span className="text-sm font-semibold">
                 Compare ({products.length}/4)
               </span>
@@ -51,7 +51,7 @@ export default function CompareBar() {
                     </div>
                     <div className="max-w-[140px] hidden sm:block">
                       <p className="text-xs font-medium truncate">{product.name}</p>
-                      <p className="text-xs font-bold" style={{ color: "var(--color-cyan-500)" }}>
+                      <p className="text-xs font-bold" style={{ color: "var(--color-green-600)" }}>
                         {formatPrice(product.salePrice ?? product.price)}
                       </p>
                     </div>

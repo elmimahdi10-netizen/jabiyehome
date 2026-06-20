@@ -77,7 +77,7 @@ export default function TrustSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <p className="text-sm font-semibold text-cyan-500 uppercase tracking-wider mb-3">
+          <p className="text-sm font-semibold text-green-500 uppercase tracking-wider mb-3">
             Why Jabiyehome
           </p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
@@ -92,10 +92,10 @@ export default function TrustSection() {
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="flex gap-4 p-5 rounded-2xl border border-border/60 bg-card hover:border-cyan-500/30 transition-colors duration-200"
+              className="flex gap-4 p-5 rounded-2xl border border-border/60 bg-card hover:border-green-500/30 transition-colors duration-200"
             >
-              <div className="h-10 w-10 shrink-0 rounded-xl bg-cyan-500/10 flex items-center justify-center">
-                <item.Icon className="h-5 w-5 text-cyan-500" />
+              <div className="h-10 w-10 shrink-0 rounded-xl bg-green-500/10 flex items-center justify-center">
+                <item.Icon className="h-5 w-5 text-green-500" />
               </div>
               <div>
                 <h3 className="font-semibold text-sm text-foreground mb-1">{item.title}</h3>

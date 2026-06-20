@@ -22,9 +22,9 @@ const buttonVariants = cva(
         navy:
           "bg-[hsl(222,72%,10%)] text-white shadow hover:bg-[hsl(222,72%,14%)] border border-white/10 active:scale-[0.98]",
         "cyan-outline":
-          "border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 active:scale-[0.98]",
+          "border border-green-600 text-green-600 hover:bg-green-600/10 active:scale-[0.98]",
         glow:
-          "bg-cyan-500 text-navy-900 shadow-glow-cyan hover:bg-cyan-400 active:scale-[0.98] font-semibold",
+          "bg-green-600 text-[#111827] shadow-glow-cyan hover:bg-green-500 active:scale-[0.98] font-semibold",
       },
       size: {
         default: "h-10 px-5 py-2",

@@ -37,7 +37,7 @@ export default function AdminCategoriesClient({ categories }: { categories: Cate
                   <div className="flex items-center gap-2">
                     <div style={{ width: `${cat.depth * 16}px` }} />
                     {cat.depth > 0 && <ChevronRight className="h-3.5 w-3.5 shrink-0" style={{ color: "var(--color-muted-foreground)" }} />}
-                    <FolderTree className="h-4 w-4 shrink-0" style={{ color: "var(--color-cyan-500)", opacity: cat.depth === 0 ? 1 : 0.6 }} />
+                    <FolderTree className="h-4 w-4 shrink-0" style={{ color: "var(--color-green-600)", opacity: cat.depth === 0 ? 1 : 0.6 }} />
                     <span className={cat.depth === 0 ? "font-semibold" : ""}>{cat.name}</span>
                   </div>
                 </td>

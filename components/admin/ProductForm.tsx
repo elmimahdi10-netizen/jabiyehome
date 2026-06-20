@@ -159,7 +159,7 @@ export default function ProductForm({ product, categories, brands }: Props) {
             <h2 className="font-semibold">Status</h2>
             <label className="flex items-center gap-3 cursor-pointer">
               <input type="checkbox" name="isPublished" defaultChecked={product?.isPublished}
-                className="h-4 w-4 rounded accent-cyan-500" />
+                className="h-4 w-4 rounded accent-green-600" />
               <div>
                 <p className="text-sm font-medium">Published</p>
                 <p className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>Visible in the storefront</p>
@@ -167,7 +167,7 @@ export default function ProductForm({ product, categories, brands }: Props) {
             </label>
             <label className="flex items-center gap-3 cursor-pointer">
               <input type="checkbox" name="isFeatured" defaultChecked={product?.isFeatured}
-                className="h-4 w-4 rounded accent-cyan-500" />
+                className="h-4 w-4 rounded accent-green-600" />
               <div>
                 <p className="text-sm font-medium">Featured</p>
                 <p className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>Shown on homepage</p>

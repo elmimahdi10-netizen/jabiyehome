@@ -82,10 +82,10 @@ export default function ProductTabs({ product, isSignedIn = false }: ProductTabs
             className={cn(
               "px-6 py-3.5 text-sm font-medium whitespace-nowrap border-b-2 transition-colors duration-150",
               activeTab === tab.id
-                ? "border-cyan-500 text-cyan-500"
+                ? "border-green-600 text-green-600"
                 : "border-transparent hover:text-foreground"
             )}
-            style={{ color: activeTab === tab.id ? "var(--color-cyan-500)" : "var(--color-muted-foreground)" }}
+            style={{ color: activeTab === tab.id ? "var(--color-green-600)" : "var(--color-muted-foreground)" }}
           >
             {tab.label}
           </button>

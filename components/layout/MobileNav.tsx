@@ -44,9 +44,9 @@ export default function MobileNav() {
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b">
               <Link href="/" onClick={closeMobileNav} className="flex items-center gap-2">
-                <Shield className="h-6 w-6 text-cyan-500" />
+                <Shield className="h-6 w-6 text-green-600" />
                 <span className="font-display font-bold text-lg">
-                  Secure<span className="text-cyan-500">Home</span>
+                  Secure<span className="text-green-600">Home</span>
                 </span>
               </Link>
               <Button variant="ghost" size="icon" onClick={closeMobileNav}>

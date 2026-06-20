@@ -10,8 +10,8 @@ const CATEGORIES = [
     description: "Locks, thermostats, lighting, and automation",
     href: "/category/smart-home",
     Icon: Wifi,
-    color: "from-blue-600/20 to-blue-600/5",
-    iconColor: "text-blue-400",
+    color: "from-green-600/20 to-green-600/5",
+    iconColor: "text-green-500",
     count: "120+ products",
   },
   {
@@ -19,8 +19,8 @@ const CATEGORIES = [
     description: "Indoor, outdoor, 4K, AI-powered surveillance",
     href: "/category/cameras",
     Icon: Camera,
-    color: "from-cyan-600/20 to-cyan-600/5",
-    iconColor: "text-cyan-400",
+    color: "from-green-600/20 to-green-600/5",
+    iconColor: "text-green-500",
     count: "85+ products",
     featured: true,
   },
@@ -66,7 +66,7 @@ export default function CategoryShowcase() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-cyan-500 uppercase tracking-wider mb-3">
+          <p className="text-sm font-semibold text-green-500 uppercase tracking-wider mb-3">
             Product categories
           </p>
           <h2
@@ -89,10 +89,10 @@ export default function CategoryShowcase() {
             >
               <Link
                 href={cat.href}
-                className={`group relative flex flex-col p-6 rounded-2xl border bg-gradient-to-br ${cat.color} border-border/60 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-card-hover h-full min-h-[200px]`}
+                className={`group relative flex flex-col p-6 rounded-2xl border bg-gradient-to-br ${cat.color} border-border/60 hover:border-green-500/40 transition-all duration-300 hover:shadow-card-hover h-full min-h-[200px]`}
               >
                 {cat.featured && (
-                  <span className="absolute top-3 right-3 text-[10px] font-bold bg-cyan-500 text-navy-900 px-2 py-0.5 rounded-full">
+                  <span className="absolute top-3 right-3 text-[10px] font-bold bg-green-500 text-[#111827] px-2 py-0.5 rounded-full">
                     POPULAR
                   </span>
                 )}

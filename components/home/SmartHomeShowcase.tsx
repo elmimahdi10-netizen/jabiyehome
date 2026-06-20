@@ -62,9 +62,9 @@ export default function SmartHomeShowcase() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
-              <Wifi className="h-4 w-4 text-blue-400" />
-              <span className="text-sm font-medium text-blue-400">Smart Home</span>
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-1.5 mb-6">
+              <Wifi className="h-4 w-4 text-green-500" />
+              <span className="text-sm font-medium text-green-500">Smart Home</span>
             </div>
 
             <h2
@@ -73,7 +73,7 @@ export default function SmartHomeShowcase() {
             >
               Your home works for you,
               <br />
-              <span className="text-blue-400">automatically</span>
+              <span className="text-green-500">automatically</span>
             </h2>
 
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -92,8 +92,8 @@ export default function SmartHomeShowcase() {
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
                   className="flex gap-3"
                 >
-                  <div className="h-9 w-9 shrink-0 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                    <feature.Icon className="h-4 w-4 text-blue-400" />
+                  <div className="h-9 w-9 shrink-0 rounded-lg bg-green-500/10 flex items-center justify-center">
+                    <feature.Icon className="h-4 w-4 text-green-500" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-foreground">{feature.title}</p>
@@ -105,7 +105,7 @@ export default function SmartHomeShowcase() {
               ))}
             </div>
 
-            <Button variant="navy" size="lg" asChild>
+            <Button variant="default" size="lg" asChild>
               <Link href="/category/smart-home">
                 Explore Smart Home <ArrowRight className="h-4 w-4" />
               </Link>
@@ -122,18 +122,18 @@ export default function SmartHomeShowcase() {
             {/* Phone mockup with app UI */}
             <div className="relative mx-auto w-72 sm:w-80">
               {/* Glow */}
-              <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-75" />
+              <div className="absolute inset-0 bg-slate-500/10 blur-3xl rounded-full scale-75" />
 
               {/* App window */}
-              <div className="relative bg-[#0a1628] rounded-3xl border border-white/10 p-5 shadow-2xl">
+              <div className="relative bg-[#111827] rounded-3xl border border-white/10 p-5 shadow-2xl">
                 {/* Header bar */}
                 <div className="flex items-center justify-between mb-5">
                   <div>
                     <p className="text-xs text-white/40">Good evening</p>
                     <p className="text-sm font-semibold text-white">Home Dashboard</p>
                   </div>
-                  <div className="h-8 w-8 rounded-full bg-cyan-500/20 flex items-center justify-center">
-                    <Smartphone className="h-4 w-4 text-cyan-400" />
+                  <div className="h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <Smartphone className="h-4 w-4 text-green-500" />
                   </div>
                 </div>
 
@@ -141,9 +141,9 @@ export default function SmartHomeShowcase() {
                 <div className="grid grid-cols-2 gap-2.5 mb-4">
                   {[
                     { label: "Front door", status: "Locked", color: "text-green-400", bg: "bg-green-500/10" },
-                    { label: "Alarm", status: "Armed", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+                    { label: "Alarm", status: "Armed", color: "text-green-500", bg: "bg-green-500/10" },
                     { label: "Thermostat", status: "21 °C", color: "text-amber-400", bg: "bg-amber-500/10" },
-                    { label: "Lights", status: "3 on", color: "text-blue-400", bg: "bg-blue-500/10" },
+                    { label: "Lights", status: "3 on", color: "text-green-500", bg: "bg-green-500/10" },
                   ].map((tile) => (
                     <div key={tile.label} className={`${tile.bg} rounded-xl p-3`}>
                       <p className="text-[10px] text-white/50 mb-1">{tile.label}</p>

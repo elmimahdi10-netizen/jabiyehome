@@ -159,7 +159,7 @@ export default function CartPageClient() {
 
             {subtotal < 299 && (
               <p className="text-xs rounded-lg px-3 py-2"
-                style={{ background: "color-mix(in srgb, var(--color-cyan-500) 8%, transparent)", color: "var(--color-cyan-500)" }}>
+                style={{ background: "color-mix(in srgb, var(--color-green-600) 8%, transparent)", color: "var(--color-green-600)" }}>
                 Add {formatPrice(299 - subtotal)} more for free shipping
               </p>
             )}

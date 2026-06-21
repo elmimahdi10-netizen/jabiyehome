@@ -20,6 +20,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     signIn: "/login",
     error: "/login",
   },
+export const { handlers, auth, signIn, signOut } = NextAuth({
+  trustHost: true,
+  adapter: PrismaAdapter(prisma),
+  session: { strategy: "jwt" },
+  pages: {
+    signIn: "/login",
+    error: "/login",
+  },
   providers: [
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -48,9 +56,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         if (!limit.allowed) return null;
 
         const user = await prisma.user.findUnique({ where: { email } });
-        if (!user || !user.passwordHash || !user.isActive) return null;
-
-        const isValid = await compare(password, user.passwordHash);
+        if (!user || !user.password) return null;
+        const isValid = await compare(password, user.password);
         if (!isValid) return null;
 
         return {

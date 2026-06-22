@@ -35,7 +35,7 @@ export async function submitReviewAction(
 
   // Check product exists and is published
   const product = await prisma.product.findUnique({
-    where: { id: productId, isPublished: true },
+    where: { id: productId, active: true },
     select: { id: true, slug: true },
   });
   if (!product) return { success: false, error: "Product not found." };

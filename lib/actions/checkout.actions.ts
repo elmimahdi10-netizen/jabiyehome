@@ -35,7 +35,7 @@ export async function createCheckoutSession(
   try {
     const productIds = items.map((i) => i.productId);
     const products = await prisma.product.findMany({
-      where: { id: { in: productIds }, isPublished: true },
+      where: { id: { in: productIds }, active: true },
       include: { images: { where: { isPrimary: true }, take: 1 }, variants: true },
     });
 

@@ -71,4 +71,28 @@ export async function updateStockAction(id: string, stock: number): Promise<Prod
   await prisma.product.update({ where: { id }, data: { stock } });
   revalidatePath("/admin/products");
   return { success: true };
-}
+export async function updateProductAction(id: string, formData: FormData, images: string[]): Promise<ProductFormState> {
+  const session = await auth();
+  requireAdmin((session?.user as any)?.role);
+
+  const raw = Object.fromEntries(formData.entries());
+  const parsed = productSchema.safeParse({
+    ...raw,
+    featured: raw.featured === "on",
+    active: raw.active === "on",
+  });
+  if (!parsed.success) return { success: false, error: parsed.error.issues[0].message };
+
+  await prisma.product.update({
+    where: { id },
+    data: {
+      ...parsed.data,
+      images,
+    },
+  });
+
+  revalidatePath("/admin/products");
+  revalidatePath(`/admin/products/${id}`);
+  revalidatePath("/products");
+  return { success: true, productId: id };
+}}

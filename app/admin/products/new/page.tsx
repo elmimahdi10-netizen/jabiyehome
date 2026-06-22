@@ -7,10 +7,7 @@ import Link from "next/link";
 export const metadata: Metadata = { title: "New Product — Admin" };
 
 export default async function NewProductPage() {
-  const [categories, brands] = await Promise.all([
-    prisma.category.findMany({ where: { isActive: true }, orderBy: { name: "asc" } }),
-    prisma.brand.findMany({ where: { isActive: true }, orderBy: { name: "asc" } }),
-  ]);
+  const categories = await prisma.category.findMany({ orderBy: { name: "asc" } });
 
   return (
     <div className="space-y-6">
@@ -20,7 +17,7 @@ export default async function NewProductPage() {
         <span>New product</span>
       </nav>
       <h1 className="text-2xl font-bold">Add new product</h1>
-      <ProductForm categories={categories as any[]} brands={brands as any[]} />
+      <ProductForm categories={categories as any[]} brands={[]} />
     </div>
   );
 }

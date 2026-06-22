@@ -34,7 +34,7 @@ export default async function ComparePage({ searchParams }: Props) {
 
   const products = await prisma.product.findMany({
     where: { id: { in: ids }, isPublished: true },
-    include: { category: true, brand: true, images: { where: { isPrimary: true }, take: 1 }, variants: true },
+    include: { category: true },
   });
 
   // Preserve order from the ids param

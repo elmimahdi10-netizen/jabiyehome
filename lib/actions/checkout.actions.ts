@@ -36,7 +36,7 @@ export async function createCheckoutSession(
     const productIds = items.map((i) => i.productId);
     const products = await prisma.product.findMany({
       where: { id: { in: productIds }, active: true },
-      include: { images: { where: { isPrimary: true }, take: 1 }, variants: true },
+      include: { category: true },
     });
 
     if (products.length !== productIds.length) {
@@ -47,7 +47,7 @@ export async function createCheckoutSession(
     for (const item of items) {
       const product = products.find((p: { id: string }) => p.id === item.productId)!;
       const variant = item.variantId
-        ? product.variants.find((v: { id: string }) => v.id === item.variantId)
+        ? null
         : null;
       const stock = variant ? variant.stock : product.stock;
       if (stock < item.quantity) {
@@ -69,7 +69,7 @@ export async function createCheckoutSession(
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map((item) => {
       const product = products.find((p: { id: string }) => p.id === item.productId)!;
       const variant = item.variantId
-        ? product.variants.find((v: { id: string }) => v.id === item.variantId)
+        ? null
         : null;
       const unitAmount = Math.round((Number(product.salePrice ?? product.price) + Number(variant?.priceModifier ?? 0)) * 100);
       const primaryImage = (product.images as Array<{ url: string }>)[0]?.url;

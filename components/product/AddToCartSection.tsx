@@ -16,13 +16,13 @@ interface AddToCartSectionProps {
 export default function AddToCartSection({ product }: AddToCartSectionProps) {
   const [quantity, setQuantity] = useState(1);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(
-    product.variants[0]
+    (product.variants ?? [])[0]
   );
   const [isAdded, setIsAdded] = useState(false);
   const addItem = useCartStore((s) => s.addItem);
 
   // Group variants by name so e.g. all "Colour" variants appear together
-  const variantGroups = product.variants.reduce<Record<string, ProductVariant[]>>(
+  const variantGroups = (product.variants ?? []).reduce<Record<string, ProductVariant[]>>(
     (groups, variant) => {
       if (!groups[variant.name]) groups[variant.name] = [];
       groups[variant.name].push(variant);

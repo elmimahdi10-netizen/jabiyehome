@@ -14,7 +14,7 @@ function normalise(p: any) {
     category: p.category ? { id: p.category.id, name: p.category.name, slug: p.category.slug } : undefined,
     featured: p.featured,
     active: p.active,
-    images: p.images ?? [],
+    images: (p.images ?? []).map((url, i) => ({ id: String(i), url, isPrimary: i === 0, altText: null, sortOrder: i })),
     createdAt: p.createdAt instanceof Date ? p.createdAt.toISOString() : p.createdAt,
     updatedAt: p.updatedAt instanceof Date ? p.updatedAt.toISOString() : p.updatedAt,
   };

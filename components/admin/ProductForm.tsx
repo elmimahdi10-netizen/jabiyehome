@@ -25,7 +25,7 @@ export default function ProductForm({ product, categories, brands }: Props) {
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
   const [images, setImages] = useState<UploadedImage[]>(
-    product?.images.map((img) => ({
+    (product?.images ?? []).map((img: any) => ({
       id: img.id,
       url: img.url,
       publicId: (img as any).publicId ?? "",

@@ -15,10 +15,10 @@ export default async function EditProductPage({ params }: Props) {
   const [productRaw, categories, brands] = await Promise.all([
     prisma.product.findUnique({
       where: { id },
-      include: { category: true, brand: true, images: { orderBy: { sortOrder: "asc" } }, variants: true },
+      include: { category: true },
     }),
-    prisma.category.findMany({ where: { isActive: true }, orderBy: { name: "asc" } }),
-    prisma.brand.findMany({ where: { isActive: true }, orderBy: { name: "asc" } }),
+    prisma.category.findMany({ orderBy: { name: "asc" } }),
+    Promise.resolve([]),
   ]);
 
   if (!productRaw) notFound();
@@ -38,7 +38,7 @@ export default async function EditProductPage({ params }: Props) {
       isPrimary: img.isPrimary,
       sortOrder: img.sortOrder,
     })),
-    variants: (productRaw.variants as any[]).map((v) => ({ ...v, priceModifier: Number(v.priceModifier) })),
+    variants: [],
     createdAt: productRaw.createdAt.toISOString(),
     updatedAt: productRaw.updatedAt.toISOString(),
   };

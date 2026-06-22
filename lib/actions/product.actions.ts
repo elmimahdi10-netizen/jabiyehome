@@ -18,7 +18,7 @@ const productSchema = z.object({
   description: z.string().min(1),
   price: z.coerce.number().positive(),
   comparePrice: z.coerce.number().positive().optional().nullable(),
-  sku: z.string().optional().nullable(),
+  sku: z.string().optional().nullable().transform(v => v === "" ? null : v),
   stock: z.coerce.number().int().min(0),
   categoryId: z.string().min(1),
   featured: z.coerce.boolean().default(false),
@@ -41,7 +41,7 @@ export async function createProductAction(formData: FormData, images: string[]):
   const existing = await prisma.product.findUnique({ where: { slug } });
   if (existing) return { success: false, error: "A product with this name already exists." };
   const product = await prisma.product.create({
-    data: { ...parsed.data, slug, images },
+    data: { ...parsed.data, slug, images: images.map((img: any) => typeof img === "string" ? img : img.url) },
   });
   revalidatePath("/admin/products");
   revalidatePath("/products");

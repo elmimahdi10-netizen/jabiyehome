@@ -61,7 +61,7 @@ export default function ProductTabs({ product, isSignedIn = false }: ProductTabs
 
   const tabs = [
     { id: "description", label: "Description" },
-    { id: "specs", label: "Specifications", hidden: !product.specs || Object.keys(product.specs).length === 0 },
+    { id: "specs", label: "Specifications", hidden: true },
     { id: "reviews", label: `Reviews${product.reviewCount ? ` (${product.reviewCount})` : ""}` },
   ].filter((t) => !t.hidden);
 
@@ -100,9 +100,9 @@ export default function ProductTabs({ product, isSignedIn = false }: ProductTabs
             <p className="leading-relaxed whitespace-pre-line" style={{ color: "var(--color-muted-foreground)" }}>
               {product.description}
             </p>
-            {product.tags.length > 0 && (
+            {(product.tags ?? []).length > 0 && (
               <div className="flex flex-wrap gap-2 pt-4 border-t" style={{ borderColor: "var(--color-border)" }}>
-                {product.tags.map((tag) => (
+                {(product.tags ?? []).map((tag) => (
                   <span
                     key={tag}
                     className="text-xs px-3 py-1 rounded-full capitalize"
@@ -120,7 +120,7 @@ export default function ProductTabs({ product, isSignedIn = false }: ProductTabs
         {activeTab === "specs" && product.specs && (
           <div className="max-w-xl">
             <dl className="divide-y rounded-xl border overflow-hidden" style={{ borderColor: "var(--color-border)" }}>
-              {Object.entries(product.specs).map(([key, value], i) => (
+              {Object.entries(product.specs ?? {}).map(([key, value], i) => (
                 <div
                   key={key}
                   className="flex items-start gap-4 px-5 py-3.5"

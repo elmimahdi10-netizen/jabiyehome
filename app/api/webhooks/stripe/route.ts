@@ -64,7 +64,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   const productIds = items.map((i) => i.productId);
   const products = await prisma.product.findMany({
     where: { id: { in: productIds } },
-    include: { images: { where: { isPrimary: true }, take: 1 }, variants: true },
+    include: { category: true },
   });
 
   // Build order items with price snapshot

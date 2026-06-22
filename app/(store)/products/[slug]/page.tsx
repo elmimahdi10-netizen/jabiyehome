@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: product.name,
       description: product.shortDesc ?? product.description.slice(0, 160),
-      images: product.images.filter((i) => i.isPrimary).map((i) => ({ url: i.url })),
+      images: (product.images ?? []).filter((i: any) => i.isPrimary).map((i: any) => ({ url: i.url })),
       url: `${siteUrl}/products/${product.slug}`,
       type: "website",
     },
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: product.name,
       description: product.shortDesc ?? "",
-      images: product.images.filter((i) => i.isPrimary).map((i) => i.url),
+      images: (product.images ?? []).filter((i: any) => i.isPrimary).map((i: any) => i.url),
     },
   };
 }

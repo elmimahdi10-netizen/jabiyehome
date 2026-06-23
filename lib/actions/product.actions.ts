@@ -60,7 +60,7 @@ export async function updateProductAction(id: string, formData: FormData, images
   if (!parsed.success) return { success: false, error: parsed.error.issues[0].message };
   await prisma.product.update({
     where: { id },
-    data: { ...parsed.data, images },
+    data: { ...parsed.data, images: images.map((img: any) => typeof img === "string" ? img : img.url) },
   });
   revalidatePath("/admin/products");
   revalidatePath(`/admin/products/${id}`);

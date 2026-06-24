@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-white/60">
               <a href="tel:+18005551234" className="flex items-center gap-2 hover:text-green-500 transition-colors">
                 <Phone className="h-4 w-4 shrink-0" />
-                +1 (800) 555-1234
+                
               </a>
               <a href="mailto:support@jabiyehome.com" className="flex items-center gap-2 hover:text-green-500 transition-colors">
                 <Mail className="h-4 w-4 shrink-0" />
@@ -30,7 +30,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
-                <span>1234 Security Ave, San Francisco, CA 94105</span>
+                <span>Arendal, Norway</span>
               </div>
             </div>
             <div className="flex items-center gap-2 pt-2 flex-wrap">

@@ -183,13 +183,9 @@ export const footerLinks = {
   company: [
     { label: "About Us", href: "/about" },
     { label: "Blog", href: "/blog" },
-    { label: "Careers", href: "/careers" },
-    { label: "Press", href: "/press" },
-    { label: "Partners", href: "/partners" },
   ],
   support: [
-    { label: "Help Center", href: "/help" },
-    { label: "Installation Guides", href: "/guides" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact Us", href: "/contact" },
     { label: "Warranty", href: "/warranty" },
     { label: "Returns", href: "/returns" },

@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const TRUST_POINTS = [
-  "Professional installation included",
   "30-day money-back guarantee",
-  "24/7 monitoring available",
+  "No subscription required",
+  "Fast delivery to Norway and Europe",
 ];
 
 export default function HeroSection() {
@@ -47,7 +47,7 @@ export default function HeroSection() {
           >
             <Badge variant="outline" className="mb-6 px-4 py-1.5 text-sm font-medium border-green-500/30 bg-green-500/10">
               <Shield className="h-3.5 w-3.5 mr-1.5" />
-              Trusted by 150,000+ homeowners
+              Home Security Specialist
             </Badge>
           </motion.div>
 
@@ -65,12 +65,9 @@ export default function HeroSection() {
           {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl"
           >
-            Enterprise-grade security systems designed for modern homes.
-            Smart cameras, intelligent alarms, and seamless home automation — all in one ecosystem.
+            Affordable security cameras, alarm kits, smart doorbells and motion sensors.
           </motion.p>
 
           {/* Trust points */}
@@ -146,7 +143,7 @@ export default function HeroSection() {
                 ))}
                 <span className="text-sm font-semibold text-slate-900 ml-1">4.9</span>
               </div>
-              <p className="text-xs text-slate-500">from 12,400+ verified reviews</p>
+              <p className="text-xs text-slate-500">Trusted by customers in Norway and Europe</p>
             </div>
           </motion.div>
         </div>

@@ -77,7 +77,7 @@ export default function NewsletterSection() {
           )}
 
           <p className="text-xs text-muted-foreground mt-4">
-            Join 28,000+ subscribers. We send 2 emails per month max.
+            No spam, ever. Unsubscribe anytime.
           </p>
         </motion.div>
       </div>

@@ -16,8 +16,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
-              Professional-grade home security and smart home solutions.
-              Trusted by over 150,000 homeowners worldwide.
+              Your home security specialist based in Arendal, Norway. Quality products, fast shipping, no subscription required..
             </p>
             <div className="space-y-2 text-sm text-white/60">
               <a href="tel:+18005551234" className="flex items-center gap-2 hover:text-green-500 transition-colors">

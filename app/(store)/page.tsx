@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
+import HeroBanner from "@/components/home/HeroBanner";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import { getFeaturedProducts } from "@/lib/services/product.service";
@@ -17,6 +18,7 @@ export default async function HomePage() {
   const featuredProducts = await getFeaturedProducts(4).catch(() => []);
   return (
     <>
+      <HeroBanner />
       <HeroSection />
 
       <section className="py-20 bg-white">

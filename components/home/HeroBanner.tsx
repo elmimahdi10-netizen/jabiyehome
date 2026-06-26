@@ -7,19 +7,19 @@ export default function HeroBanner() {
         
         {/* Logo grand format */}
         <div className="flex items-center justify-center gap-4 mb-10">
-          <svg viewBox="0 0 60 74" xmlns="http://www.w3.org/2000/svg" style={{ height: "80px", width: "62px" }}>
+          <svg viewBox="0 0 60 74" xmlns="http://www.w3.org/2000/svg" style={{ height: "50px", width: "40px" }}>
             <path d="M30 0 L60 12 L60 40 C60 58 47 67 30 74 C13 67 0 58 0 40 L0 12 Z" fill="#16A34A"/>
             <path d="M30 5 L55 16 L55 40 C55 56 43 64 30 70 C17 64 5 56 5 40 L5 16 Z" fill="#15803D"/>
             <polyline points="17,40 26,50 43,28" fill="none" stroke="white" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           <div className="text-left">
-            <div style={{ fontSize: "48px", fontWeight: "800", color: "#ffffff", letterSpacing: "-1px", lineHeight: "1" }}>JABIYE</div>
-            <div style={{ fontSize: "24px", fontWeight: "600", color: "#16A34A", letterSpacing: "8px", lineHeight: "1.2" }}>HOME</div>
+            <div style={{ fontSize: "32px", fontWeight: "800", color: "#ffffff", letterSpacing: "-1px", lineHeight: "1" }}>JABIYE</div>
+            <div style={{ fontSize: "16px", fontWeight: "600", color: "#16A34A", letterSpacing: "8px", lineHeight: "1.2" }}>HOME</div>
           </div>
         </div>
 
         {/* Tagline */}
-        <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
           Protect What <span className="text-green-400">Matters Most.</span>
         </h1>
 

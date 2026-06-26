@@ -21,8 +21,8 @@
   --color-card-foreground: #0a0f1e;
   --color-popover: #ffffff;
   --color-popover-foreground: #0a0f1e;
-  --color-primary: #06b6d4;
-  --color-primary-foreground: #0a1628;
+ --color-primary: #16A34A;
+--color-primary-foreground: #ffffff;
   --color-secondary: #f1f5f9;
   --color-secondary-foreground: #1e293b;
   --color-muted: #f1f5f9;
@@ -33,7 +33,7 @@
   --color-destructive-foreground: #ffffff;
   --color-border: #e2e8f0;
   --color-input: #e2e8f0;
-  --color-ring: #06b6d4;
+  --color-ring: #16A34A;
 
   /* Font families */
   --font-sans: "Inter", system-ui, sans-serif;

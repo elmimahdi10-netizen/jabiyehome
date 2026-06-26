@@ -21,13 +21,13 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* NAV */}
-        <nav className="hidden md:flex items-center gap-8 text-sm text-text-secondary">
-          <Link href="/products" className="hover:text-text transition">Products</Link>
-          <Link href="/category/smart-home" className="hover:text-text transition">Smart Home</Link>
-          <Link href="/category/cameras" className="hover:text-text transition">Cameras</Link>
-          <Link href="/category/alarms" className="hover:text-text transition">Alarms</Link>
-        </nav>
+         {/* NAV */}
+<nav className="hidden md:flex items-center gap-8 text-sm text-text-secondary">
+  <Link href="/products" className="hover:text-text transition">Products</Link>
+  <Link href="/about" className="hover:text-text transition">About</Link>
+  <Link href="/faq" className="hover:text-text transition">FAQ</Link>
+  <Link href="/contact" className="hover:text-text transition">Contact</Link>
+</nav>
 
         {/* ACTIONS */}
         <div className="flex items-center gap-4">
